@@ -1,0 +1,67 @@
+{
+  "player": {
+      "location": "кухня"
+  },
+  "items": [
+    {
+      "name": "чай",
+      "location": "кухня"
+    },
+    {
+      "name": "конспекты",
+      "location": "комната"
+    },
+    {
+      "name": "ключи",
+      "location": "комната"
+    }
+  ],
+  "backpack": {
+    "name": "рюкзак",
+    "location": "комната",
+    "isEquipped": false,
+    "itemsInside": []
+  },
+  "rooms": [
+    {
+      "name": "кухня",
+      "enterCondition": "",
+      "items": ["чай"],
+      "exits": {
+        "коридор": "коридор"
+      }
+    },
+    {
+      "name": "комната",
+      "enterCondition": "",
+      "items": ["ключи", "конспекты", "рюкзак"],
+      "exits": {
+        "коридор": "коридор"
+      }
+    },
+    {
+      "name": "коридор",
+      "enterCondition": "",
+      "items": [],
+      "exits": {
+        "комната": "комната",
+        "кухня": "кухня",
+        "улица": "улица"
+      }
+    },
+    {
+      "name": "улица",
+      "enterCondition": "дверь открыта",
+      "items": [],
+      "exits": {
+        "домой": "домой"
+      }
+    },
+    {
+      "name": "домой",
+      "enterCondition": "",
+      "items": [],
+      "exits": {}
+    }
+  ]
+}
